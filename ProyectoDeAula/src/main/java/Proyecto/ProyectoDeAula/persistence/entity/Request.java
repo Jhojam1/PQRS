@@ -1,0 +1,49 @@
+package Proyecto.ProyectoDeAula.persistence.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.sql.Date;
+
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Solicitudes ")
+public class Request {
+
+    @Column(name = "ID_Solicitud")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idRequest;
+
+    @JoinColumn(name = "ID_Usuario")
+    @ManyToOne
+    private User user;
+
+    @JoinColumn(name = "ID_Tipo_Solicitud")
+    @ManyToOne
+    private RequestType requestType;
+
+    @JoinColumn(name = "ID_Categoria")
+    @ManyToOne
+    private Category category;
+
+    @Column(name = "Descripcion_Solicitud")
+    private String description;
+
+    @Column(name = "Fecha_Solicitud")
+    private Date date;
+
+    @Column(name = "Respuesta_Solicitud")
+    private String answer;
+
+    @JoinColumn(name = "Estado_Solicitud")
+    @ManyToOne
+    private RequestState requestState;
+
+    @Column(name = "Medio_Respuesta")
+    private String mediumAnswer;
+}
