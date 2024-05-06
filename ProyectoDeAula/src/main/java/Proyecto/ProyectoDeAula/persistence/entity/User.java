@@ -11,11 +11,8 @@ import lombok.*;
 @Entity
 @Table(name = "Usuarios")
 public class User {
-    @Column(name = "ID_Usuario")
-    @Id
-    private int idUser;
-
     @Column(name = "Usuario")
+    @Id
     private String user;
 
     @Column(name = "Contraseña")
