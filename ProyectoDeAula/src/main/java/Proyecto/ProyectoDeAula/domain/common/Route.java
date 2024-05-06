@@ -64,4 +64,10 @@ public class Route {
         public static final String SAVE_CATEGORY = "save";
         public static final String GET_CATEGORY = "get";
     }
+
+    public static class Role{
+        public static final String Role = "role";
+        public static final String SAVE_ROLE = "save";
+        public static final String GET_ROLE = "get";
+    }
 }
