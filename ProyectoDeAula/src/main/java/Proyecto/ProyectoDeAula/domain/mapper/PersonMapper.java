@@ -3,8 +3,6 @@ package Proyecto.ProyectoDeAula.domain.mapper;
 import Proyecto.ProyectoDeAula.domain.dto.PersonDTO;
 import Proyecto.ProyectoDeAula.persistence.entity.Person;
 
-import java.util.Random;
-
 public class PersonMapper {
 
     public static Person toEntity(PersonDTO personDTO) {
