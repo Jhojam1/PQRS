@@ -11,6 +11,7 @@ public class UserMapper {
         user.setPassword(userDTO.getPassword());
         user.setPerson(userDTO.getPerson());
         user.setUserType(userDTO.getUserType());
+        user.setRole(userDTO.getRole());
         return user;
     }
     public static UserDTO toDto(User user) {
@@ -19,6 +20,7 @@ public class UserMapper {
         userDTO.setPassword(user.getPassword());
         userDTO.setPerson(userDTO.getPerson());
         userDTO.setUserType(userDTO.getUserType());
+        userDTO.setRole(userDTO.getRole());
         return userDTO;
     }
 }

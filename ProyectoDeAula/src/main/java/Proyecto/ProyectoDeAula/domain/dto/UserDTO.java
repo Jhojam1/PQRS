@@ -1,6 +1,7 @@
 package Proyecto.ProyectoDeAula.domain.dto;
 
 import Proyecto.ProyectoDeAula.persistence.entity.Person;
+import Proyecto.ProyectoDeAula.persistence.entity.Role;
 import Proyecto.ProyectoDeAula.persistence.entity.UserType;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,4 +13,5 @@ public class UserDTO {
     private String password;
     private Person person;
     private UserType userType;
+    private Role role;
 }
