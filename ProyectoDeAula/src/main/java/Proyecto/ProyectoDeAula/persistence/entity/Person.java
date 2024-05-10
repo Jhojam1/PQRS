@@ -19,6 +19,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPerson;
 
+    @JoinColumn(name = "ID_Tipo_Persona")
+    @ManyToOne
+    private PersonType personType;
+
     @Column(name = "Nombre_Persona")
     private String name;
 

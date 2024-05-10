@@ -9,15 +9,15 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Tipos_Usuarios")
-public class UserType {
+@Table(name = "Tipos_Persona")
+public class PersonType {
 
-    @Column(name="Id_Tipo_Usuario")
+    @Column(name="Id_Tipo_Persona")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUserType;
+    private int idPersonType;
 
 
-    @Column(name = "Nombre_Tipo_Identificacion")
-    private String nameUserType;
+    @Column(name = "Nombre_Tipo_Persona")
+    private String namePersonType;
 }

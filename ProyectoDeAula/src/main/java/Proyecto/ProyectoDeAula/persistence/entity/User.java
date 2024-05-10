@@ -22,10 +22,6 @@ public class User {
     @OneToOne
     private Person person;
 
-    @JoinColumn(name = "ID_Tipo_Usuario")
-    @ManyToOne
-    private UserType userType;
-
     @JoinColumn(name = "ID_Rol")
     @ManyToOne
     private Role role;

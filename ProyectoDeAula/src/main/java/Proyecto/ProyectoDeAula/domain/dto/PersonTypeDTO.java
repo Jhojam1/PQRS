@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class UserTypeDTO {
-    private int idUserType;
-    private String nameUserType;}
+public class PersonTypeDTO {
+    private int idPersonType;
+    private String namePersonType;}

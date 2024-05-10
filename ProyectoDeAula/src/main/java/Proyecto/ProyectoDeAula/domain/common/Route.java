@@ -11,12 +11,6 @@ public class Route {
         public static final String LOGIN = "login";
     }
 
-    public static class UserType {
-        public static final String UserType = "user_type";
-        public static final String SAVE_TIPO_USUARIO = "save";
-        public static final String GET_TIPO_USUARIO = "get";
-    }
-
     public static class ResponsibleDependency{
         public static final String ResponsibleDependency = "responsible_dependency";
         public static final String SAVE_TIPO_RESPONSABLE_DEPENDENCIA = "save";
@@ -45,6 +39,12 @@ public class Route {
         public static final String Person = "person";
         public static final String SAVE_PERSON = "save";
         public static final String GET_PERSON = "get";
+    }
+
+    public static class PersonType {
+        public static final String PersonType = "person_type";
+        public static final String SAVE_PERSON_TYPE = "save";
+        public static final String GET_PERSON_TYPE = "get";
     }
 
     public static class IdentificationType{
