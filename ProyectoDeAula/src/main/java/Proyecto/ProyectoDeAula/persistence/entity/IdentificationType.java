@@ -19,4 +19,8 @@ public class IdentificationType {
 
     @Column(name = "Nombre_Tipo_Identificacion")
     private String nameIdentificationType;
+
+    public IdentificationType(int idIdentificationType) {
+        this.idIdentificationType = idIdentificationType;
+    }
 }
