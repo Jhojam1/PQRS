@@ -13,4 +13,5 @@ public class UserDTO {
     private String password;
     private Person person;
     private Role role;
+    private String stateUser;
 }

@@ -40,7 +40,7 @@ public class Request {
     @Column(name = "Respuesta_Solicitud")
     private String answer;
 
-    @JoinColumn(name = "Estado_Solicitud")
+    @JoinColumn(name = "Id_Estado_Solicitud")
     @ManyToOne
     private RequestState requestState;
 

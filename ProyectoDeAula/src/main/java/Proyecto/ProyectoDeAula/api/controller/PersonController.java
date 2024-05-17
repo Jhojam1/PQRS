@@ -16,6 +16,7 @@ public class PersonController {
 
     @PostMapping(value = Route.Person.SAVE_PERSON)
     public PersonDTO save(@RequestBody PersonDTO personDTO){
+
         return personService.save(personDTO);
     }
 

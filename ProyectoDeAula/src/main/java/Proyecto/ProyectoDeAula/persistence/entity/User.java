@@ -25,4 +25,7 @@ public class User {
     @JoinColumn(name = "ID_Rol")
     @ManyToOne
     private Role role;
+
+    @Column(name = "Estado_Usuario")
+    private String stateUser;
 }
