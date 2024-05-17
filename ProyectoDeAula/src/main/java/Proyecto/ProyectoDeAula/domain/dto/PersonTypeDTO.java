@@ -1,10 +1,12 @@
 package Proyecto.ProyectoDeAula.domain.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class PersonTypeDTO {
-    private int idPersonType;
+    private Long idPersonType;
     private String namePersonType;}

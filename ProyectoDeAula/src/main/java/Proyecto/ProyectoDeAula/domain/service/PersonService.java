@@ -1,13 +1,16 @@
 package Proyecto.ProyectoDeAula.domain.service;
 
 import Proyecto.ProyectoDeAula.domain.dto.PersonDTO;
+import Proyecto.ProyectoDeAula.domain.dto.PersonTypeDTO;
 import Proyecto.ProyectoDeAula.domain.mapper.PersonMapper;
+import Proyecto.ProyectoDeAula.domain.mapper.PersonTypeMapper;
 import Proyecto.ProyectoDeAula.persistence.entity.Person;
 import Proyecto.ProyectoDeAula.persistence.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,5 +31,9 @@ public class PersonService {
 
     public List<PersonDTO> getAll() {
         return personRepository.findAll().stream().map(PersonMapper::toDTO).collect(Collectors.toList());
+    }
+
+    public Optional<PersonDTO> findById(Long id) {
+        return personRepository.findById(id).map(PersonMapper::toDTO);
     }
 }

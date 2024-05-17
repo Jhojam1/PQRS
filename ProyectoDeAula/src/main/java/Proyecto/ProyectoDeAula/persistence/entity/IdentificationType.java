@@ -15,12 +15,12 @@ public class IdentificationType {
     @Column(name = "ID_Tipo_Identificacion")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idIdentificationType;
+    private Long idIdentificationType;
 
     @Column(name = "Nombre_Tipo_Identificacion")
     private String nameIdentificationType;
 
-    public IdentificationType(int idIdentificationType) {
+    public IdentificationType(Long idIdentificationType) {
         this.idIdentificationType = idIdentificationType;
     }
 }

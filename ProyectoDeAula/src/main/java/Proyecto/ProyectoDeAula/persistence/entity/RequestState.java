@@ -15,7 +15,7 @@ public class RequestState {
     @Column(name = "ID_Estado_Solicitud")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRequestState;
+    private Long idRequestState;
 
     @Column(name = "Nombre_Estado_Solicitud")
     private String nameRequestState;

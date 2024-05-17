@@ -17,7 +17,7 @@ public class Person {
     @Column(name = "ID_Persona")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPerson;
+    private Long idPerson;
 
     @JoinColumn(name = "ID_Tipo_Persona")
     @ManyToOne

@@ -4,9 +4,11 @@ import Proyecto.ProyectoDeAula.domain.common.Route;
 import Proyecto.ProyectoDeAula.domain.dto.RoleDTO;
 import Proyecto.ProyectoDeAula.domain.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = Route.API + Route.Role.Role)
@@ -22,5 +24,15 @@ public class RoleController {
     @GetMapping(value = Route.Role.GET_ROLE)
     public List<RoleDTO> get() {
         return roleService.getAll();
+    }
+
+    @PutMapping(value = Route.User.UPDATE_USUARIO)
+    public ResponseEntity<?> update(@RequestBody RoleDTO roleDTO) {
+        Optional<RoleDTO> roleDTOOptional = roleService.findById(roleDTO.getId());
+        if(roleDTOOptional.isPresent()) {
+            roleService.save(roleDTO);
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 }

@@ -17,7 +17,7 @@ public class Request {
     @Column(name = "ID_Solicitud")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRequest;
+    private Long idRequest;
 
     @JoinColumn(name = "ID_Usuario")
     @ManyToOne

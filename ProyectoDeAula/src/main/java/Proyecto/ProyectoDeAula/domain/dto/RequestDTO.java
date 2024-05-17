@@ -4,15 +4,17 @@ import Proyecto.ProyectoDeAula.persistence.entity.Category;
 import Proyecto.ProyectoDeAula.persistence.entity.RequestState;
 import Proyecto.ProyectoDeAula.persistence.entity.RequestType;
 import Proyecto.ProyectoDeAula.persistence.entity.User;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Date;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class RequestDTO {
-    private int idRequest;
+    private Long idRequest;
     private User user;
     private RequestType requestType;
     private Category category;

@@ -35,6 +35,16 @@ public class UserController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @PutMapping(value = Route.User.UPDATE_USUARIO)
+    public ResponseEntity<?> update(@RequestBody UserDTO userDTO) {
+        Optional<UserDTO> userOptional = userService.findById(userDTO.getUser());
+        if(userOptional.isPresent()) {
+            userService.save(userDTO);
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
 
 

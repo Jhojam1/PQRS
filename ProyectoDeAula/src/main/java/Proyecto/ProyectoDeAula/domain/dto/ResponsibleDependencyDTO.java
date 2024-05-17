@@ -1,11 +1,13 @@
 package Proyecto.ProyectoDeAula.domain.dto;
 
 import Proyecto.ProyectoDeAula.persistence.entity.Dependence;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
 @Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ResponsibleDependencyDTO {
     private String user;
     private Dependence dependence;

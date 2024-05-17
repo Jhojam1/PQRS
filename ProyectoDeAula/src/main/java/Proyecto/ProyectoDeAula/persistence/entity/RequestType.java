@@ -15,7 +15,7 @@ public class RequestType {
     @Column(name = "ID_Tipo_Solicitud")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRequestType;
+    private Long idRequestType;
 
     @Column(name = "Nombre_Tipo_Solicitud")
     private String nameRequestType;

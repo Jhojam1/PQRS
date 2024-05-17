@@ -1,12 +1,15 @@
 package Proyecto.ProyectoDeAula.domain.service;
 
 import Proyecto.ProyectoDeAula.domain.dto.RequestTypeDTO;
+import Proyecto.ProyectoDeAula.domain.dto.UserDTO;
 import Proyecto.ProyectoDeAula.domain.mapper.RequestTypeMapper;
+import Proyecto.ProyectoDeAula.domain.mapper.UserMapper;
 import Proyecto.ProyectoDeAula.persistence.repository.RequestTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,5 +24,9 @@ public class RequestTypeService {
 
     public List<RequestTypeDTO> getAll() {
         return requestTypeRepository.findAll().stream().map(RequestTypeMapper::toDto).collect(Collectors.toList());
+    }
+
+    public Optional<RequestTypeDTO> findById(Long id) {
+        return requestTypeRepository.findById(id).map(RequestTypeMapper::toDto);
     }
 }

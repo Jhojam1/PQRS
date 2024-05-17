@@ -24,6 +24,10 @@ public class UserService {
         return userRepository.findAll().stream().map(UserMapper::toDto).collect(Collectors.toList());
     }
 
+    public Optional<UserDTO> findById(String id) {
+        return userRepository.findById(id).map(UserMapper::toDto);
+    }
+
     public Optional<UserDTO> findByIdAndPassword(String usuario, String password) {
         User user = userRepository.findByUserAndPassword(usuario, password);
         if (user != null) {

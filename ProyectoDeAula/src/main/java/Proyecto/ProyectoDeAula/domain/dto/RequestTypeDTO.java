@@ -1,11 +1,13 @@
 package Proyecto.ProyectoDeAula.domain.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class RequestTypeDTO {
-    private int idRequestType;
+    private Long idRequestType;
     private String nameRequestType;
 }

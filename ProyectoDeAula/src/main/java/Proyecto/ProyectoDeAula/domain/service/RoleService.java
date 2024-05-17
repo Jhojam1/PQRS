@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -20,5 +21,9 @@ public RoleDTO save(RoleDTO roleDTO) {
     }
     public List<RoleDTO> getAll() {
         return roleRepository.findAll().stream().map(RoleMapper::toDTO).collect(Collectors.toList());
+    }
+
+    public Optional<RoleDTO> findById(Long id) {
+        return roleRepository.findById(id).map(RoleMapper::toDTO);
     }
 }

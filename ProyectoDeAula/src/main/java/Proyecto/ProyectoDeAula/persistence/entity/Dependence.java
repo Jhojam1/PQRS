@@ -15,7 +15,7 @@ public class Dependence {
     @Column(name = "ID_Dependencia")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idDependence;
+    private Long idDependence;
 
     @Column(name = "Nombre_Dependencia")
     private String nameDependence;

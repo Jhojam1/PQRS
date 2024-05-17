@@ -1,13 +1,15 @@
 package Proyecto.ProyectoDeAula.domain.dto;
 
 import Proyecto.ProyectoDeAula.persistence.entity.Dependence;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class CategoryDTO {
-    private int idCategory;
+    private Long idCategory;
     private String nameCategory;
     private Dependence dependence;
 
