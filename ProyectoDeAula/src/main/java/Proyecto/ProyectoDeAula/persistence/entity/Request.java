@@ -27,10 +27,6 @@ public class Request {
     @ManyToOne
     private RequestType requestType;
 
-    @JoinColumn (name = "Id_Dependencia")
-    @OneToOne
-    private Dependence dependence;
-
     @JoinColumn(name = "ID_Categoria")
     @ManyToOne
     private Category category;
@@ -50,4 +46,8 @@ public class Request {
 
     @Column(name = "Medio_Respuesta")
     private String mediumAnswer;
+
+    @JoinColumn (name = "ID_Dependencia")
+    @ManyToOne
+    private Dependence dependence;
 }
