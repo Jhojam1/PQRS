@@ -12,6 +12,7 @@ public class RequestMapper {
         request.setIdRequest(request.getIdRequest());
         request.setUser(requestDTO.getUser());
         request.setRequestType(requestDTO.getRequestType());
+        request.setDependence(requestDTO.getDependence());
         request.setCategory(requestDTO.getCategory());
         request.setDescription(requestDTO.getDescription());
         request.setDate(requestDTO.getDate());
@@ -25,6 +26,7 @@ public class RequestMapper {
         requestDTO.setIdRequest(request.getIdRequest());
         requestDTO.setUser(request.getUser());
         requestDTO.setRequestType(request.getRequestType());
+        requestDTO.setDependence(request.getDependence());
         requestDTO.setCategory(request.getCategory());
         requestDTO.setDescription(request.getDescription());
         requestDTO.setDate(request.getDate());

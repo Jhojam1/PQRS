@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Responsable_Dependencia ")
+@Table(name = "Responsables_Dependencia ")
 public class ResponsibleDependency {
 
     @Column(name = "Usuario")
