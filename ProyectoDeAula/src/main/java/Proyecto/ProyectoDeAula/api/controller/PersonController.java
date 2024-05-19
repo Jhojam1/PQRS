@@ -27,10 +27,11 @@ public class PersonController {
     public List<PersonDTO> get(){return personService.getAll();}
 
 
-    @PutMapping(value = Route.Person.UPDATE_PERSON)
-    public ResponseEntity<?> update(@RequestBody PersonDTO personDTO) {
-        Optional<PersonDTO> personDTOOptional = personService.findById(personDTO.getIdPerson());
+    @PutMapping(value = Route.Person.UPDATE_PERSON + "/{id}")
+    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody PersonDTO personDTO) {
+        Optional<PersonDTO> personDTOOptional = personService.findById(id);
         if(personDTOOptional.isPresent()) {
+            personDTO.setIdPerson(id); // Asegurar que el ID está correctamente configurado
             personService.save(personDTO);
             return ResponseEntity.ok().build();
         }
