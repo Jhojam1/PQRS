@@ -3,7 +3,7 @@ import React from "react";
 import './Recovery.css';
 
 export const Recovery = () => {
-    const proxi ='PROXIMAMNETE';
+    const proxi ='PROXIMAMENTE';
     const handleSubmit = async (e) => {
         e.preventDefault();
         alert(proxi)

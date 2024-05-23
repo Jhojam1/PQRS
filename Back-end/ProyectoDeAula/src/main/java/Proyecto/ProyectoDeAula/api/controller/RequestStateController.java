@@ -24,7 +24,7 @@ public class RequestStateController {
     @GetMapping(value = Route.RequestState.GET_REQUEST_STATE)
     public List<RequestStateDTO> get(){return requestStateService.getAll();}
 
-    @PutMapping(value = Route.User.UPDATE_USUARIO)
+    @PutMapping(value = Route.RequestState.UPDATE_REQUEST_STATE)
     public ResponseEntity<?> update(@RequestBody RequestStateDTO requestStateDTO) {
         Optional<RequestStateDTO> requestStateDTOOptional = requestStateService.findById(requestStateDTO.getIdRequestState());
         if(requestStateDTOOptional.isPresent()) {

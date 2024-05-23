@@ -26,7 +26,7 @@ public class RoleController {
         return roleService.getAll();
     }
 
-    @PutMapping(value = Route.User.UPDATE_USUARIO)
+    @PutMapping(value = Route.Role.UPDATE_ROLE)
     public ResponseEntity<?> update(@RequestBody RoleDTO roleDTO) {
         Optional<RoleDTO> roleDTOOptional = roleService.findById(roleDTO.getId());
         if(roleDTOOptional.isPresent()) {

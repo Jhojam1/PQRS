@@ -20,11 +20,14 @@ public class UserService {
         userRepository.save(UserMapper.toEntity(userDTO));
         return userDTO;
     }
+
+
     public List<UserDTO> getAll() {
         return userRepository.findAll().stream().map(UserMapper::toDto).collect(Collectors.toList());
     }
 
     public Optional<UserDTO> findById(String id) {
+
         return userRepository.findById(id).map(UserMapper::toDto);
     }
 
